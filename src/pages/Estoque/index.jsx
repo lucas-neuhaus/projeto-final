@@ -1,8 +1,10 @@
-import React from 'react'
 import Botao from '../../components/Botao'
+import Input from '../../components/Input'
 
 export default function Estoque() {
   return (
-    <div> <Botao> </Botao> </div>
+    <div> <Botao> </Botao> 
+    <Input> </Input>
+    </div>
   )
 }

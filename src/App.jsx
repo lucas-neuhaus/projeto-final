@@ -5,7 +5,7 @@ import Cadastrar from "./pages/Cadastrar";
 import Estoque from "./pages/Estoque";
 import Armazem from "./pages/Armazem";
 
-import Home from "./components/home"
+import Home from "./pages/home"
 
 
 
