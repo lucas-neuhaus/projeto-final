@@ -1,7 +1,8 @@
 import React from 'react'
+import Botao from '../../components/Botao'
 
 export default function Estoque() {
   return (
-    <div>Estoque</div>
+    <div> <Botao> </Botao> </div>
   )
 }
