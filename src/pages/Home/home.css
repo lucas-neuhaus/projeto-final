@@ -1,0 +1,12 @@
+.Home {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh; /* Define a altura do componente como 100% da altura da tela */
+  }
+  
+  .Home a {
+    display: block; /* Para que os links ocupem a largura total disponível */
+    margin-bottom: 10px; /* Define o espaçamento entre os links */
+  }
