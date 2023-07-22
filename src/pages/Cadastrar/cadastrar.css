@@ -1,0 +1,27 @@
+.cadastroTitulo {
+    margin-bottom: 32px;
+  }
+  
+  .cadastroContainer {
+    width: 100%;
+    max-width: 480px;  
+    border: 1px solid gray;
+    margin: 0 auto;
+    margin-top: 64px;
+    padding: 16px;
+  }
+  
+  .cadastroBotao {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .linkEstilizado {
+    color: #007bff; 
+    text-decoration: none; 
+    font-weight: bold;
+  }
+
+  .linkEstilizado:hover {
+    color: darkblue;
+  }
