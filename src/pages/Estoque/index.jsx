@@ -3,7 +3,7 @@ import Input from '../../components/Input'
 
 export default function Estoque() {
   return (
-    <div> <Botao> </Botao> 
+    <div> <Botao enviar="Entrar"> </Botao> 
     <Input />
     </div>
   )
