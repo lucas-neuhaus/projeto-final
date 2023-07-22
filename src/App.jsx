@@ -5,27 +5,22 @@ import Cadastrar from "./pages/Cadastrar";
 import Estoque from "./pages/Estoque";
 import Armazem from "./pages/Armazem";
 
-import Home from "./components/Home"
-
-
+import Home from "./pages/Home/Home";
 
 const App = () => {
-  return ( 
-    
+  return (
     <>
-    <Home />
-    <BrowserRouter>
-      <Routes>
-
-        <Route path="/Login" element={<Login />}></Route>
-        <Route path="/Cadastrar" element={<Cadastrar />}></Route>
-        <Route path="/Estoque" element={<Estoque />}></Route>
-        <Route path="/Armazem" element={<Armazem />}></Route>
-
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />}>
+            <Route path="login" element={<Login />}></Route>
+            <Route path="cadastrar" element={<Cadastrar />}></Route>
+            <Route path="estoque" element={<Estoque />}></Route>
+            <Route path="armazem" element={<Armazem />}></Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
-   
   );
 };
 

@@ -1,0 +1,23 @@
+.Home {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh; /* Define a altura do componente como 100% da altura da tela */
+    border-right: 1px solid black;
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .Home a {
+    display: block; /* Para que os links ocupem a largura total disponível */
+    margin-bottom: 10px; /* Define o espaçamento entre os links */
+  }
+
+  .Home-container {
+    display: flex;
+  }
+
+  .Home-content {
+    flex: 1;
+  }
