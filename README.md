@@ -1,33 +1,31 @@
 # Projeto-Final-Front-end
+## Módulo 3 - Projeto Avaliativo - FuturoDev
 
-# Projeto LAB Cat&Dog
+# Projeto DEVin-Adotion
+* Este é o projeto de uma aplicação para controle de estoque de material para ongs cuidadoras de animais.
 
-Módulo 3 - Projeto Avaliativo
+## Padrões
 
-# Padrões
+### Bibliotecas
 
-## Bibliotecas
+**Para Desenvolvimento:**
+<img width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+          
 
-### Para desenvolvimento
-React
+**Para Acesso de Dados:**
+* Fetch
 
-### para acesso de dados
-Fetch
+**Para Rotas:**
+* React Router DOM
 
-### para Rotas
-REACT ROUTER DOM
+### Linguagem
+<img width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
 
-### Para Construção de Interface de Usuário
-BOOTSTRAP
+### Ferramenta Para Criação do Projeto
+* Vite
 
-## Linguagem
-Javascript
+### Estrutura da Organização
+* Atomic Design Patern
 
-## Ferramenta para criação do projeto
-Vite
-
-## Estrutura da Organização
-Atomic Design Patern
-
-## Backend
-JSON Server para simular as requisições da API
+### Backend
+* JSON Server para simular as requisições da API
