@@ -2,6 +2,12 @@
   "usuarios": [
     {
       "id": 1
+    },
+    {
+      "nome": "Lucas da Silva Neuhaus",
+      "email": "lucasneuhaus@hotmail.com",
+      "senha": "8423",
+      "id": 2
     }
   ]
 }

@@ -36,7 +36,7 @@ const Cadastrar = () => {
     fetch("http://localhost:3000/usuarios",{
       method: 'POST',
       headers: {
-        'Content-Type': 'aplication/Json',
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(form),
     }).then(() => {
