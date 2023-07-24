@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import Botao from "../../components/Botao";
@@ -7,6 +7,8 @@ import "./cadastrar.css";
 import "react-toastify/dist/ReactToastify.css";
 
 const Cadastrar = () => {
+
+  const navegar = useNavigate();
   
   const [form, setForm] = useState({
     nome: "",
@@ -28,6 +30,19 @@ const Cadastrar = () => {
     if (campo === "senha") {
       setForm({ ...form, senha: valor });
     }
+  };
+
+  const enviaDadosParaBackend = () => {
+    fetch("http://localhost:3000/usuarios",{
+      method: 'POST',
+      headers: {
+        'Content-Type': 'aplication/Json',
+      },
+      body: JSON.stringify(form),
+    }).then(() => {
+      navegar("/Login");
+    });
+     
   };
 
   return (
@@ -61,7 +76,9 @@ const Cadastrar = () => {
 
             <div className="cadastroBotao">
               <Botao
-                aoClicar={{atualizarForm}}
+                aoClicar={() => {
+                  enviaDadosParaBackend();
+                }}
                 tipo="button"
                 enviar="Cadastrar"
                 cor="green"
