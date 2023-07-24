@@ -1,13 +1,16 @@
 {
   "usuarios": [
     {
+      "nome": "Lene",
+      "email": "lene@gmail",
+      "senha": "123",
       "id": 1
-    },
+    }
+  ],
+  "login": [
     {
-      "nome": "Lucas da Silva Neuhaus",
-      "email": "lucasneuhaus@hotmail.com",
-      "senha": "8423",
-      "id": 2
+      "email":"lene@gmail",
+      "senha":"123"
     }
   ]
 }

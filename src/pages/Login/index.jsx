@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import Botao from "../../components/Botao";
@@ -10,6 +10,8 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
 
+  const navegar = useNavigate();
+
   const confirmarLogin = () => {
     if (email === "") {
       toast.warn("Digite um e-mail válido");
@@ -19,7 +21,23 @@ const Login = () => {
       toast.warn("Digite uma senha válida");
       return;
     }
+  
+    
+    fetch("http://localhost:3000/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, senha }),
+    }).then((resposta) => {
+      if (resposta.ok) {
+        navegar("/estoque");
+      } else {
+        toast.warn("Dados inválidos"); 
+      }
+    });
   };
+  
 
   return (
     <>
