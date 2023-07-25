@@ -33,16 +33,47 @@ const Cadastrar = () => {
   };
 
   const enviaDadosParaBackend = () => {
-    fetch("http://localhost:3000/usuarios",{
-      method: 'POST',
+    if (!form.nome || !form.email || !form.senha) {
+      toast.warn("Por favor, preencha todos os campos obrigatórios");
+      return;
+    }
+
+    fetch("http://localhost:3000/usuarios", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(form),
-    }).then(() => {
-      navegar("/Login");
-    });
-     
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        toast.success("Usuário cadastrado com sucesso!");
+  
+        const novoUsuarioLogin = {
+          email: data.email,
+          senha: data.senha,
+        };
+        console.log("Novo usuário para login:", novoUsuarioLogin);
+  
+        fetch("http://localhost:3000/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(novoUsuarioLogin),
+        })
+          .then(() => {
+            navegar("/Login");
+          })
+          .catch((error) => {
+            console.error("Erro ao atualizar informações de login:", error);
+            toast.error("Erro ao cadastrar o usuário");
+          });
+      })
+      .catch((error) => {
+        console.error("Erro ao cadastrar o usuário:", error);
+        toast.error("Erro ao cadastrar o usuário");
+      });
   };
 
   return (
