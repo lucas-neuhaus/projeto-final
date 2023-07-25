@@ -3,11 +3,33 @@ import { useEffect, useState } from 'react';
 
 import Botao from '../../components/Botao';
 
-import "./estoque.css"; 
+import "./estoqueLista.css"; 
 
 
 const ListaProdutos = () => {
   const [produtos, setProdutos] = useState([]);
+
+  const navegar = useNavigate();
+
+  const buscarProdutos = () => {
+    fetch("http://localhost:3000/produtos")
+      .then((response) => response.json())
+      .then((dados) => setProdutos(dados));
+  };
+
+  const apagarProduto = (id) => {
+    if (window.confirm("Deseja mesmo apagar este produto?")) {
+      fetch(`http://localhost:3000/produtos/${id}`, {
+        method: "DELETE",
+      }).then(() => {
+        buscarProdutos();
+      });
+    }
+  };
+
+  useEffect(() => {
+    buscarProdutos();
+  }, []);
 
   return (
     <>
