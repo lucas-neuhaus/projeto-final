@@ -1,8 +1,20 @@
 {
-  "usuarios": [
-    
-  ],
-  "login": [
-   
+  "usuarios": [],
+  "login": [],
+  "produtos": [
+    {
+      "id": 3,
+      "armazenado": "Estoque 02",
+      "produto": "Coleira",
+      "quantidade": 30,
+      "categoria": "Adulto"
+    },
+    {
+      "id": 4,
+      "armazenado": "Estoque 02",
+      "produto": "Arranhador",
+      "quantidade": 20,
+      "categoria": "Filhote"
+    }
   ]
 }

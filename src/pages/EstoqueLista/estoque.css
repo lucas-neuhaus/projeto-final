@@ -1,0 +1,72 @@
+/* Estilo do menu lateral */
+.listaProdutosConteudo {
+  color: #080808;
+  padding: 10px;
+  width: 200px;
+}
+
+/* Estilo do título Estoque */
+.tituloEstoque {
+  margin-top: -20px;
+  margin-left: 20px;
+}
+
+/* Estilo do subtitulo Lista de Produtos */
+.listaProdutosSubtitulo {
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+/* Estilo da tabela */
+.listaProdutosTabela {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Estilo do cabeçalho da tabela */
+.listaProdutosTabelaHeadCell {
+  color: #080808;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Estilo das células da tabela */
+.listaProdutosTabelaCell {
+  border: 1px solid #ffffff;
+  padding: 10px;
+}
+
+/* Estilo do botão Cadastrar Produto */
+.listaProdutosCadastrarProdutos {
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px auto;
+  text-align: center;
+}
+
+/* Estilo dos botões de editar e excluir */
+.listaProdutosBotaoEditar {
+  display: inline-block;
+  margin-right: 10px;
+  background-color: #00DFA2;
+  color: #fff;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Estilo do botão Excluir */
+.listaProdutosBotaoExcluir {
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+/* Estilo dos botões de editar e excluir dentro da célula da tabela */
+.listaProdutosTabelaCell .listaProdutosBotaoEditar,
+.listaProdutosTabelaCell .listaProdutosBotaoExcluir {
+  text-align: center;
+}
+
+
+  
