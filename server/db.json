@@ -1,16 +1,8 @@
 {
   "usuarios": [
-    {
-      "nome": "Lene",
-      "email": "lene@gmail",
-      "senha": "123",
-      "id": 1
-    }
+    
   ],
   "login": [
-    {
-      "email":"lene@gmail",
-      "senha":"123"
-    }
+   
   ]
 }
