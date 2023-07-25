@@ -22,23 +22,24 @@ const Login = () => {
       return;
     }
   
-    
-    fetch("http://localhost:3000/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, senha }),
-    }).then((resposta) => {
-      if (resposta.ok) {
-        navegar("/estoque");
-      } else {
-        toast.warn("Dados inválidos"); 
-      }
-    });
+    fetch("http://localhost:3000/login")
+      .then((response) => response.json())
+      .then((data) => {
+        const usuario = data.find((usuario) => usuario.email === email && usuario.senha === senha);
+  
+        if (usuario) {
+          toast.success("Login bem-sucedido!");
+          navegar("/estoque");
+        } else {
+          toast.warn("Credenciais inválidas");
+        }
+      })
+      .catch((error) => {
+        console.error("Erro ao efetuar o login:", error);
+        toast.error("Erro ao efetuar o login");
+      });
   };
   
-
   return (
     <>
       <section>
