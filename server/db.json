@@ -3,17 +3,19 @@
   "login": [],
   "produtos": [
     {
-      "id": 3,
-      "armazenado": "Estoque 02",
-      "produto": "Coleira",
-      "quantidade": 30,
+      "id": 1,
+      "tipoProduto": "Antiparasitário",
+      "armazemId": "Armazém Cachorro",
+      "animal": "Cachorro",
+      "quantidade": "30",
       "categoria": "Adulto"
     },
     {
-      "id": 4,
-      "armazenado": "Estoque 02",
-      "produto": "Arranhador",
-      "quantidade": 20,
+      "id": 2,
+      "tipoProduto": "Ração",
+      "armazemId": "Armazém Gato",
+      "animal": "Gato",
+      "quantidade": "30",
       "categoria": "Filhote"
     }
   ]
