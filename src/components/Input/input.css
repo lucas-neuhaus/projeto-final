@@ -1,4 +1,3 @@
-
 .inputConteiner {
   display: flex;
   flex-direction: column;
@@ -19,6 +18,28 @@
 }
 
 .inputId input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.inputId select {
+  width: 25%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  appearance: none; 
+  background-color: #fff;
+  cursor: pointer;
+}
+
+
+.inputId select::-ms-expand {
+  display: none; 
+}
+
+.inputId select:focus {
+  outline: none;
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }

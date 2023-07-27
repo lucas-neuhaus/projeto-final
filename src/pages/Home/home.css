@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
 .Home {
   display: flex;
   flex-direction: column;
@@ -12,12 +15,12 @@
 }
 
 .Home h1 {
-  font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
-  font-family: "Your Custom Font", sans-serif; /* Substitua "Your Custom Font" pela fonte desejada */
+  font-size: 24px; 
+  font-family: "Helvica", sans-serif; 
   margin-bottom: 20px;
-  color: #00e1ff; /* Defina a cor do texto */
-  text-shadow: 2px 2px 4px rgba(230, 230, 230, 0.4); /* Adicione uma sombra ao texto */
-  text-transform: uppercase; /* Transforme o texto em caixa alta */
+  color: #00e1ff;
+  text-shadow: 2px 2px 4px rgba(230, 230, 230, 0.4); 
+  text-transform: uppercase; 
   
 }
 
@@ -64,14 +67,12 @@
 
 
 .Home img {
-  width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
-  height: auto; /* Mantém a proporção da imagem */
-  margin-bottom: -10px; /* Adicione margem inferior para espaçamento */
-  border-radius: 50%; /* Adicione borda arredondada para a imagem */
+  width: 150px; 
+  height: auto; 
+  margin-bottom: -10px; 
+  border-radius: 50%; 
 }
 
 body {
   font-family: 'Roboto', sans-serif;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
