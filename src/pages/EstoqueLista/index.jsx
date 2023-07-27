@@ -62,7 +62,7 @@ const ListaProdutos = () => {
                   <td className="listaProdutosTabelaCell">
                     <Link
                       className="listaProdutosBotaoEditar"
-                      to={`editar/${produto.id}`}
+                      to={`/estoqueAtualizar/${produto.id}`}
                     >
                       Editar
                     </Link>
