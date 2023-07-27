@@ -12,6 +12,26 @@ server.db = router.db;
 server.use(middlewares);
 server.use(jsonServer.bodyParser);
 
+// Rota para cadastrar um novo armazém
+server.post("/armazens", (req, res) => {
+  const { nome, animal, situacao } = req.body;
+  if (!nome || !animal) {
+    res.status(400).json({ message: "Nome e animal são obrigatórios." });
+  } else {
+    const armazens = server.db.get("armazens");
+    const id = armazens.size().value() + 1;
+    const novoArmazem = { id, nome, animal, situacao: situacao || false };
+    armazens.push(novoArmazem).write();
+    res.status(201).json(novoArmazem);
+  }
+});
+
+// Rota para buscar a lista de armazéns cadastrados
+server.get("/armazens", (req, res) => {
+  const armazens = server.db.get("armazens").value();
+  res.json(armazens);
+});
+
 server.post("/login", (req, res) => {
   const { email, senha } = req.body;
   if (email === "" || senha === "") {
