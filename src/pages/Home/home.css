@@ -3,15 +3,53 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  height: 100vh; /* Define a altura do componente como 100% da altura da tela */
-  border-right: 1px solid black;
+  height: 40vh;
+  border-right: 1px solid #ddd;
   width: 100%;
   max-width: 200px;
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+.Home h1 {
+  font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
+  font-family: "Your Custom Font", sans-serif; /* Substitua "Your Custom Font" pela fonte desejada */
+  margin-bottom: 20px;
+  color: #00e1ff; /* Defina a cor do texto */
+  text-shadow: 2px 2px 4px rgba(230, 230, 230, 0.4); /* Adicione uma sombra ao texto */
+  text-transform: uppercase; /* Transforme o texto em caixa alta */
+  
 }
 
 .Home a {
-  display: block; /* Para que os links ocupem a largura total disponível */
-  margin-bottom: 10px; /* Define o espaçamento entre os links */
+  display: block;
+  color: #666666;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.Home a:hover {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease;
+  padding: 10px 20px;
+}
+
+.Home a.active {
+  background-color: #00e1ff;
+  color: #fff;
+  font-weight: bold;
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease;
+  padding: 10px 20px;
 }
 
 .Home-container {
@@ -19,7 +57,21 @@
 }
 
 .Home-content {
-flex: 1;
-text-align: center;
-margin-top: 100px;
+  flex: 1;
+  text-align: center;
+  margin-top: 100px;
 }
+
+
+.Home img {
+  width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-bottom: -10px; /* Adicione margem inferior para espaçamento */
+  border-radius: 50%; /* Adicione borda arredondada para a imagem */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
