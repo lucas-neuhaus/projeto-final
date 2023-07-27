@@ -1,0 +1,62 @@
+.armazemTitulo {
+  background-color: #f7f7f7;
+  color: rgb(79, 77, 77);
+  height: 100px;
+  font-family: Verdana, sans-serif;
+  margin-bottom: 32px;
+  text-align: left;
+  }
+
+.armazemPrincipal {
+  background-color: #f7f7f7;
+}
+
+.armazemLista{
+  font-family: Verdana, sans-serif;
+  color: rgb(79, 77, 77);
+  margin-bottom: 32px;
+  margin-left: 250px;
+  text-align: left;
+}
+.armazemTabela {
+  background-color: white;
+  margin-left: 250px;
+  justify-content: center;
+  font-family: Verdana, sans-serif;
+  color: rgb(79, 77, 77);
+  width: 80%;
+  border-collapse: collapse;
+  
+}
+thead{
+  background-color: #f7f7f7;
+}
+
+
+tr {
+  height: 70px; /* Define a altura desejada para as linhas da tabela */
+  border-bottom: 1px solid #f7f7f7;
+}
+    
+  .armazemContainer {
+    font-family: Verdana, sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 64px;
+    padding: 16px;
+   
+    }
+
+     
+    .armazemBotaoEditar {
+      display: inline-block;
+      margin-right: 10px;
+      background-color: #00DFA2;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      padding: 8px 12px;
+    }
