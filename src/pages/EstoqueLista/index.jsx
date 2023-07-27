@@ -46,16 +46,18 @@ const ListaProdutos = () => {
                 <th className="listaProdutosTabelaHeadCell">Armazenado</th>
                 <th className="listaProdutosTabelaHeadCell">Produto</th>
                 <th className="listaProdutosTabelaHeadCell">Quantidade</th>
+                <th className="listaProdutosTabelaHeadCell">Animal</th>
                 <th className="listaProdutosTabelaHeadCell">Categoria</th>
               </tr>
             </thead>
             <tbody className="listaProdutosTabelaBody">
-              {produtos.map((produto) => (
+            {produtos.map((produto) => (
                 <tr key={produto.id} className="listaProdutosTabelaRow">
                   <td className="listaProdutosTabelaCell">{produto.id}</td>
-                  <td className="listaProdutosTabelaCell">{produto.armazenado}</td>
-                  <td className="listaProdutosTabelaCell">{produto.produto}</td>
+                  <td className="listaProdutosTabelaCell">{produto.armazemId}</td>
+                  <td className="listaProdutosTabelaCell">{produto.tipoProduto}</td>
                   <td className="listaProdutosTabelaCell">{produto.quantidade}</td>
+                  <td className="listaProdutosTabelaCell">{produto.animal}</td>
                   <td className="listaProdutosTabelaCell">{produto.categoria}</td>
                   <td className="listaProdutosTabelaCell">
                     <Link
