@@ -6,6 +6,7 @@ import EstoqueLista from "./pages/EstoqueLista";
 import EstoqueCadastro from "./pages/EstoqueCadastro";
 import EstoqueAtualizar from "./pages/EstoqueAtualizar";
 import Armazem from "./pages/Armazem";
+import ArmazemAtualizar from "./pages/ArmazemAtualizar";
 
 import Home from "./pages/Home";
 
@@ -19,8 +20,9 @@ const App = () => {
             <Route path="cadastrar" element={<Cadastrar />}></Route>
             <Route path="estoque" element={<EstoqueLista />}></Route>
             <Route path="estoqueCadastro" element={<EstoqueCadastro />}></Route>
-            <Route path="estoqueAtualizar/:id" element={<EstoqueAtualizar />} />
+            <Route path="estoqueAtualizar/:id" element={<EstoqueAtualizar />}></Route>
             <Route path="armazem" element={<Armazem />}></Route>
+            <Route path="armazemAtualizar/:id" element={<ArmazemAtualizar />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>

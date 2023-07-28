@@ -34,11 +34,11 @@ thead{
 
 
 tr {
-  height: 70px; /* Define a altura desejada para as linhas da tabela */
+  height: 70px;
   border-bottom: 1px solid #f7f7f7;
 }
     
-  .armazemContainer {
+.armazemContainer {
     font-family: Verdana, sans-serif;
     display: flex;
     flex-direction: row;
@@ -51,7 +51,7 @@ tr {
     }
 
      
-    .armazemBotaoEditar {
+.armazemBotaoEditar {
       display: inline-block;
       margin-right: 10px;
       background-color: #00DFA2;
