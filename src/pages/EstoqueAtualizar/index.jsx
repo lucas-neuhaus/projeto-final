@@ -10,16 +10,16 @@ const EstoqueAtualizar = () => {
   const { id } = useParams();
 
   const [form, setForm] = useState({
-    id: "",
-    tipoProduto: "",
-    armazemId:"",
-    animal:"",
-    quantidade: "",
-    categoria: "",
+    id: null,
+    tipoProduto: null,
+    armazemId: null,
+    animal: null,
+    quantidade: 0,
+    categoria: null,
   });
 
   const atualizarProduto = () => {
-    fetch(`http://localhost:3000/produtos/${id}`, {
+    fetch(`http://localhost:8080/produtos/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -30,13 +30,13 @@ const EstoqueAtualizar = () => {
         toast.success("Produto atualizado com sucesso!");
         navegar("/estoque");
       } else {
-        toast.warn("Erro ao atualizar o produto!");
+        toast.error("Erro ao atualizar o produto!");
       } 
     });
   };
 
   useEffect(() => {
-    fetch(`http://localhost:3000/produtos/${id}`)
+    fetch(`http://localhost:8080/produtos/${id}`)
       .then((response) => response.json())
       .then((produto) => {
         setForm(produto);
@@ -60,7 +60,7 @@ const EstoqueAtualizar = () => {
             tipo="select"
             id="tipoProduto"
             etiqueta="Tipo do Produto"
-            valor={form.tipoProduto}
+            valor={form.tipoProduto || ""}
             aoMudar={(e) => handleSelecionavelChange("tipoProduto", e.target.value)}
           >
             <option value="">Selecione uma opção</option>
@@ -73,7 +73,7 @@ const EstoqueAtualizar = () => {
             tipo="number"
             id="quantidade"
             etiqueta="Quantidade"
-            valor={form.quantidade}
+            valor={form.quantidade || ""}
             aoMudar={(e) => handleSelecionavelChange("quantidade", e.target.value)}
           />
 

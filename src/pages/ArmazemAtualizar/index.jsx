@@ -6,59 +6,76 @@ import Botao from "../../components/Botao";
 import Input from "../../components/Input";
 
 const ArmazemAtualizar = () => {
-    const navegar = useNavigate();
-    const { id } = useParams();
-  
-    const [form, setForm] = useState({
-      nome: "",
-      animal: null,
-    });
-  
-    useEffect(() => {
-      fetch(`http://localhost:8080/armazens`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
-        .then((response) => response.json())
-        .then((armazem) => {
-          setForm({
-            nome: armazem.nome,
-            animal: armazem.animal,
-          });
-        });
-    }, []);
-  
-    const atualizarArmazem = () => {
-        const animalId = parseInt(form.animal, 10)
+  const navegar = useNavigate();
+  const { id } = useParams();
 
-      fetch(`http://localhost:8080/armazens/${id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ ...form, animal: animalId }),
+  const [form, setForm] = useState({
+    nome: "",
+    animal: null,
+  });
+
+  useEffect(() => {
+    console.log("Buscando detalhes do armazém com ID:", id);
+
+    fetch(`http://localhost:8080/armazens`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Erro ao obter os detalhes do armazém");
+        }
+        return response.json();
       })
-        .then((response) => {
-          if (response.ok) {
-            toast.success("Armazém atualizado com sucesso!");
-            navegar("/armazem");
-          } else {
-            toast.error("Erro ao atualizar o armazém!");
-          }
-        })
-        .catch((error) => {
-          console.error("Erro na requisição PUT:", error);
+      .then((armazem) => {
+        console.log("Detalhes do armazém obtidos:", armazem);
+        setForm({
+          nome: armazem.nome,
+          animal: armazem.animal,
         });
-    };
-  
-    const handleInputChange = (id, value) => {
-      setForm((prevState) => ({
-        ...prevState,
-        [id]: value,
-      }));
-    };
+      })
+      .catch((error) => {
+        console.error("Erro na requisição GET:", error);
+      });
+  }, [id]);
+
+  const atualizarArmazem = () => {
+    console.log("Enviando requisição PUT para atualizar o armazém:", form);
+
+    const animalId = parseInt(form.animal, 10);
+
+    fetch(`http://localhost:8080/armazens/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        nome: form.nome,
+        animal: animalId,
+      }),
+    })
+      .then((response) => {
+        console.log("Resposta do servidor:", response);
+        if (response.ok) {
+          toast.success("Armazém atualizado com sucesso!");
+          navegar("/armazem");
+        } else {
+          toast.error("Erro ao atualizar o armazém!");
+        }
+      })
+      .catch((error) => {
+        console.error("Erro na requisição PUT:", error);
+      });
+  };
+
+  const handleInputChange = (id, value) => {
+    setForm((prevState) => ({
+      ...prevState,
+      [id]: value,
+    }));
+  };
 
   return (
     <>
@@ -69,7 +86,7 @@ const ArmazemAtualizar = () => {
             tipo="text"
             id="nome"
             etiqueta="Nome"
-            valor={form.nome}
+            valor={form.nome || ""}
             aoMudar={(e) => handleInputChange("nome", e.target.value)}
           />
 
@@ -77,7 +94,7 @@ const ArmazemAtualizar = () => {
             tipo="select"
             id="animal"
             etiqueta="Estoque Para:"
-            valor={form.animal}
+            valor={form.animal || ""}
             aoMudar={(e) => handleInputChange("animal", e.target.value)}
           >
             <option value="">Selecione uma opção</option>
@@ -106,3 +123,4 @@ const ArmazemAtualizar = () => {
 };
 
 export default ArmazemAtualizar;
+
