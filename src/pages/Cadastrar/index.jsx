@@ -17,7 +17,6 @@ const Cadastrar = () => {
   });
 
   const atualizarForm = (valor, campo) => {
-    console.log(`Campo ${campo}: ${valor}`);
 
     if (campo === "nome") {
       setForm({ ...form, nome: valor });
@@ -46,29 +45,9 @@ const Cadastrar = () => {
       body: JSON.stringify(form),
     })
       .then((response) => response.json())
-      .then((data) => {
+      .then(() => {
         toast.success("Usuário cadastrado com sucesso!");
-  
-        const novoUsuarioLogin = {
-          email: data.email,
-          senha: data.senha,
-        };
-        console.log("Novo usuário para login:", novoUsuarioLogin);
-        
-        fetch("http://localhost:8080/login", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(novoUsuarioLogin),
-        })
-          .then(() => {
-            navegar("/estoque");
-          })
-          .catch((error) => {
-            console.error("Erro ao atualizar informações de login:", error);
-            toast.error("Erro ao cadastrar o usuário");
-          });
+        navegar("/login");
       })
       .catch((error) => {
         console.error("Erro ao cadastrar o usuário:", error);

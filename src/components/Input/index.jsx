@@ -10,7 +10,7 @@ const Input = (props) => {
         <div className="inputId">
           <select
             id={props.id}
-            value={props.valor || ""}
+            value={props.valor}
             onChange={props.aoMudar}
           >
             {props.children}
@@ -29,7 +29,7 @@ const Input = (props) => {
             id={props.id}
             type={props.tipo}
             onChange={props.aoMudar}
-            value={props.valor || ""}
+            value={props.valor}
           />
         </div>
       </div>
