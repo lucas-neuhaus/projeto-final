@@ -1,15 +1,14 @@
-import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Botao from "../../components/Botao";
 import Input from "../../components/Input";
-import "react-toastify/dist/ReactToastify.css";
 import "./style.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
-
   const navegar = useNavigate();
 
   const confirmarLogin = () => {
@@ -22,12 +21,18 @@ const Login = () => {
       return;
     }
   
-    fetch("http://localhost:3000/login")
+    fetch("http://localhost:8080/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, senha }),
+    })
       .then((response) => response.json())
       .then((data) => {
-        const usuario = data.find((usuario) => usuario.email === email && usuario.senha === senha);
+        console.log(data);
   
-        if (usuario) {
+        if (data && data.email === email && data.senha === senha) {
           toast.success("Login bem-sucedido!");
           navegar("/estoque");
         } else {
@@ -38,8 +43,8 @@ const Login = () => {
         console.error("Erro ao efetuar o login:", error);
         toast.error("Erro ao efetuar o login");
       });
-  };
-  
+  };  
+
   return (
     <>
       <section>
