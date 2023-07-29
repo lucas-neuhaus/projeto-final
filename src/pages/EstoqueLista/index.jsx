@@ -12,14 +12,14 @@ const ListaProdutos = () => {
   const navegar = useNavigate();
 
   const buscarProdutos = () => {
-    fetch("http://localhost:3000/produtos")
+    fetch("http://localhost:8080/produtos")
       .then((response) => response.json())
       .then((dados) => setProdutos(dados));
   };
 
   const apagarProduto = (id) => {
     if (window.confirm("Deseja mesmo apagar este produto?")) {
-      fetch(`http://localhost:3000/produtos/${id}`, {
+      fetch(`http://localhost:8080/produtos/${id}`, {
         method: "DELETE",
       }).then(() => {
         buscarProdutos();
