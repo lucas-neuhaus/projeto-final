@@ -87,6 +87,14 @@ const Armazem = () => {
     buscarArmazensCadastrados();
   }, []);
 
+  const renderizaAnimal = (animalValor) => {
+    const animalNome = {
+      1: "Gato",
+      2: "Cachorro",
+    };
+    return animalNome[animalValor] || "Desconhecido"; 
+  };
+
   return (
     <div className="armazemPrincipal">
       <div>
@@ -123,8 +131,6 @@ const Armazem = () => {
             <th>Nome</th>
             <th>Animal</th>
             <th>Situação</th>
-            <th></th>
-            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -132,7 +138,7 @@ const Armazem = () => {
             <tr key={armazem.id}>
               <td>{armazem.id}</td>
               <td>{armazem.nome}</td>
-              <td>{armazem.animal}</td>
+              <td>{renderizaAnimal(armazem.animal)}</td>
               <td>{armazem.ativo ? "Ativo" : "Desativado"}</td>
               <td>
                 <Link
