@@ -11,8 +11,8 @@ const CadastrarProduto = ({ modoEdicao = false }) => {
   const navegar = useNavigate();
 
   const animalLong = {
-    cachorro: 1,
-    gato: 2,
+    gato: 1,
+    cachorro: 2,
   };
 
   const tipoProdutoLong = {
@@ -22,8 +22,8 @@ const CadastrarProduto = ({ modoEdicao = false }) => {
   };
   
   const categoriaLong = {
-    adulto: 1,
-    filhote: 2,
+    filhote: 1,
+    adulto: 2,
   }
 
   const [form, setForm] = useState({
@@ -136,8 +136,8 @@ return (
         aoMudar={(e) => handleSelecionavelChange("animal", e.target.value)}
         >
         <option value="">Selecione uma opção</option>
-        <option value="1">Cachorro</option>
-        <option value="2">Gato</option>
+        <option value="1">Gato</option>
+        <option value="2">Cachorro</option>
         </Input>
 
         <Input

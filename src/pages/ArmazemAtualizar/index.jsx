@@ -9,9 +9,14 @@ const ArmazemAtualizar = () => {
   const navegar = useNavigate();
   const { id } = useParams();
 
+  const animalLong = {
+    gato: 1,
+    cachorro: 2,
+  };
+
   const [form, setForm] = useState({
     nome: "",
-    animal: null,
+    animal: animalLong,
   });
 
   useEffect(() => {
@@ -34,7 +39,7 @@ const ArmazemAtualizar = () => {
         setForm({
           nome: armazem.nome,
           animal: armazem.animal,
-        });
+});
       })
       .catch((error) => {
         console.error("Erro na requisição GET:", error);
@@ -98,8 +103,8 @@ const ArmazemAtualizar = () => {
             aoMudar={(e) => handleInputChange("animal", e.target.value)}
           >
             <option value="">Selecione uma opção</option>
-            <option value="gato">Gato</option>
-            <option value="cachorro">Cachorro</option>
+            <option value="1">Gato</option>
+            <option value="2">Cachorro</option>
           </Input>
 
           <Botao aoClicar={atualizarArmazem} enviar="Atualizar Armazém" />
