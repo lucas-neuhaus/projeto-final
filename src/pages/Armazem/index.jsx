@@ -120,7 +120,7 @@ const Armazem = () => {
           <option value="cachorro">Cachorro</option>
         </Input>
 
-        <Botao aoClicar={cadastrarArmazem} enviar="Cadastrar" cor="#4169E1" />
+        <Botao aoClicar={cadastrarArmazem} enviar="Cadastrar" cor="#4169E1" width="100px" marginTop="8px"/>
       </div>
       <h2 className="armazemLista">Locais de Armazenamento Cadastrados</h2>
       
@@ -156,6 +156,7 @@ const Armazem = () => {
                   }}
                   cor="#F31559"
                   enviar="Remover"
+                  width="100px"
                 />
               </td>
             </tr>

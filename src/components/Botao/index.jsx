@@ -9,8 +9,9 @@ const Botao = (props) => {
       style={{
         backgroundColor: props.cor,
         width: props.width,
-        marginLeft: marginLeft,
-        marginRight: marginRight,
+        marginLeft: props.marginLeft,
+        marginRight: props.marginRight,
+        marginTop: props.marginTop
       }}
     >
       {props.enviar}
