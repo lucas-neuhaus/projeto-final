@@ -1,15 +1,30 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-import Botao from '../../components/Botao';
+import Botao from "../../components/Botao";
 
-import "./estoqueLista.css"; 
-
+import "./estoqueLista.css";
 
 const ListaProdutos = () => {
   const [produtos, setProdutos] = useState([]);
-
+  const [armazens, setArmazens] = useState([]);
   const navegar = useNavigate();
+
+  const mapeamentoNomes = {
+    tipoProduto: {
+      1: "Ração",
+      2: "Antiparasitário",
+      3: "Antipulgas",
+    },
+    animal: {
+      1: "Gato",
+      2: "Cachorro",
+    },
+    categoria: {
+      1: "Adulto",
+      2: "Filhote",
+    },
+  };
 
   const buscarProdutos = () => {
     fetch("http://localhost:8080/produtos")
@@ -27,7 +42,20 @@ const ListaProdutos = () => {
     }
   };
 
+  const fetchArmazens = () => {
+    fetch("http://localhost:8080/armazens")
+      .then((response) => response.json())
+      .then((dados) => {
+        setArmazens(dados);
+      })
+      .catch((error) => {
+        console.error("Erro ao buscar os armazéns:", error);
+        toast.error("Erro ao buscar os armazéns:");
+      });
+  };
+
   useEffect(() => {
+    fetchArmazens();
     buscarProdutos();
   }, []);
 
@@ -51,14 +79,26 @@ const ListaProdutos = () => {
               </tr>
             </thead>
             <tbody className="listaProdutosTabelaBody">
-            {produtos.map((produto) => (
+              {produtos.map((produto) => (
                 <tr key={produto.id} className="listaProdutosTabelaRow">
                   <td className="listaProdutosTabelaCell">{produto.id}</td>
-                  <td className="listaProdutosTabelaCell">{produto.armazemId}</td>
-                  <td className="listaProdutosTabelaCell">{produto.tipoProduto}</td>
-                  <td className="listaProdutosTabelaCell">{produto.quantidade}</td>
-                  <td className="listaProdutosTabelaCell">{produto.animal}</td>
-                  <td className="listaProdutosTabelaCell">{produto.categoria}</td>
+                  <td className="listaProdutosTabelaCell">
+                    {armazens.find(
+                      (armazem) => armazem.id === produto.armazemId
+                    )?.nome || "N/A"}
+                  </td>
+                  <td className="listaProdutosTabelaCell">
+                    {mapeamentoNomes.tipoProduto[produto.tipoProduto]}
+                  </td>
+                  <td className="listaProdutosTabelaCell">
+                    {produto.quantidade}
+                  </td>
+                  <td className="listaProdutosTabelaCell">
+                    {mapeamentoNomes.animal[produto.animal]}
+                  </td>
+                  <td className="listaProdutosTabelaCell">
+                    {mapeamentoNomes.categoria[produto.categoria]}
+                  </td>
                   <td className="listaProdutosTabelaCell">
                     <Link
                       className="listaProdutosBotaoEditar"
@@ -77,16 +117,15 @@ const ListaProdutos = () => {
             </tbody>
           </table>
         </div>
-        <Botao className="listaProdutosBotaoCadastrarProduto"
-        aoClicar={() => navegar("/EstoqueCadastro")}
-        cor="#470D21"
-        enviar="Cadastrar Produto"
+        <Botao
+          className="listaProdutosBotaoCadastrarProduto"
+          aoClicar={() => navegar("/EstoqueCadastro")}
+          cor="#470D21"
+          enviar="Cadastrar Produto"
         />
       </section>
     </>
   );
 };
-  
-  export default ListaProdutos;
-  
 
+export default ListaProdutos;
