@@ -9,13 +9,28 @@ const EstoqueAtualizar = () => {
   const navegar = useNavigate();
   const { id } = useParams();
 
+  const animalLong = {
+    gato: 1,
+    cachorro: 2,
+  };
+
+  const tipoProdutoLong = {
+    racao: 1,
+    antiparasitario: 2,
+    antipulgas: 3,
+  };
+  
+  const categoriaLong = {
+    filhote: 1,
+    adulto: 2,
+  }
+
   const [form, setForm] = useState({
-    id: null,
-    tipoProduto: null,
-    armazemId: null,
-    animal: null,
-    quantidade: 0,
-    categoria: null,
+    id: 0,
+    tipoProduto: tipoProdutoLong,
+    animal: animalLong ,
+    quantidade: 0,                 
+    categoria: categoriaLong,
   });
 
   const atualizarProduto = () => {
@@ -64,9 +79,9 @@ const EstoqueAtualizar = () => {
             aoMudar={(e) => handleSelecionavelChange("tipoProduto", e.target.value)}
           >
             <option value="">Selecione uma opção</option>
-            <option value="Ração">Ração</option>
-            <option value="Antiparasitário">Antiparasitário</option>
-            <option value="Antipulgas">Antipulgas</option>
+            <option value="1">Ração</option>
+            <option value="2">Antiparasitário</option>
+            <option value="3">Antipulgas</option>
           </Input> 
           
           <Input
