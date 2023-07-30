@@ -1,17 +1,19 @@
 .listaProdutosConteudo {
   color: #080808;
   padding: 10px;
-  width: 200px;
+  margin-top: 100px;
+  width: 100px;
 }
 
 .tituloEstoque {
   margin-top: -20px;
   margin-left: 20px;
+  font-size: 35px;
 }
 
 .listaProdutosSubtitulo {
-  margin-top: 30px;
-  margin-left: 40px;
+margin-top: 50px;
+margin-right: 140vh;
 }
 
 .listaProdutosTabela {

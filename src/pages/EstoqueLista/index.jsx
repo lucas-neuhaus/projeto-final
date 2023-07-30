@@ -66,7 +66,7 @@ const ListaProdutos = () => {
           <h1 className="tituloEstoque">Estoque</h1>
         </div>
         <div className="conteudoPrincipal">
-          <h1 className="listaProdutosSubtitulo">Lista de Produtos</h1>
+          <h2 className="listaProdutosSubtitulo">Lista de Produtos</h2>
           <table className="listaProdutosTabela">
             <thead className="listaProdutosTabelaHead">
               <tr className="listaProdutosTabelaRow">
@@ -110,6 +110,8 @@ const ListaProdutos = () => {
                       aoClicar={() => apagarProduto(produto.id)}
                       cor="#F31559"
                       enviar="Excluir"
+                      width="100px"
+                      marginRight= "10px"
                     />
                   </td>
                 </tr>
@@ -120,8 +122,11 @@ const ListaProdutos = () => {
         <Botao
           className="listaProdutosBotaoCadastrarProduto"
           aoClicar={() => navegar("/EstoqueCadastro")}
-          cor="#470D21"
+          cor="#4169E1"
           enviar="Cadastrar Produto"
+          marginLeft="128vh"
+          marginTop="150px"
+          width="180px"
         />
       </section>
     </>

@@ -74,6 +74,7 @@ const Login = () => {
                 tipo="button"
                 enviar="Entrar"
                 cor="green"
+                marginLeft="134px"
               />
               <Link to="/Cadastrar" className="linkEstilizado">
                 Fazer Cadastro
