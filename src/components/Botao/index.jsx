@@ -8,6 +8,9 @@ const Botao = (props) => {
       type={props.tipo}
       style={{
         backgroundColor: props.cor,
+        width: props.width,
+        marginLeft: marginLeft,
+        marginRight: marginRight,
       }}
     >
       {props.enviar}
