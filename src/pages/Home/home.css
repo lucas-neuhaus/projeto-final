@@ -1,18 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 .Home {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  height: 40vh;
-  border-right: 1px solid #ddd;
+  height: 92vh;
   width: 100%;
   max-width: 200px;
-  background-color: #f7f7f7;
+  background-color: #fffde7;
   padding: 20px;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -20,13 +15,12 @@ body {
 }
 
 .Home h1 {
-  font-size: 24px; 
-  font-family: "Helvica", sans-serif; 
+  font-size: 24px;
+  font-family: "Helvica", sans-serif;
   margin-bottom: 20px;
   color: #00e1ff;
-  text-shadow: 2px 2px 4px rgba(230, 230, 230, 0.4); 
-  text-transform: uppercase; 
-  
+  text-shadow: 2px 2px 4px rgba(230, 230, 230, 0.4);
+  text-transform: uppercase;
 }
 
 .Home a {
@@ -42,9 +36,9 @@ body {
   background-color: #007bff;
   color: #fff;
   font-weight: bold;
-  border: none; 
-  border-radius: 5px; 
-  cursor: pointer; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
   padding: 10px 20px;
 }
@@ -53,9 +47,9 @@ body {
   background-color: #00e1ff;
   color: #fff;
   font-weight: bold;
-  border: none; 
-  border-radius: 5px; 
-  cursor: pointer; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
   padding: 10px 20px;
 }
@@ -67,17 +61,15 @@ body {
 .Home-content {
   flex: 1;
   text-align: center;
-  margin-top: 100px;
 }
 
-
 .Home img {
-  width: 150px; 
-  height: auto; 
-  margin-bottom: -10px; 
-  border-radius: 50%; 
+  width: 150px;
+  height: auto;
+  margin-bottom: -10px;
+  border-radius: 50%;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }

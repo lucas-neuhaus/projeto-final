@@ -1,16 +1,13 @@
-# Projeto-Final-Front-end
-## Módulo 3 - Projeto Avaliativo - FuturoDev
+# Projeto Final Front-end
+* Módulo 3 - Projeto Avaliativo - FuturoDev
 
-# Projeto DEVin-Adotion
+### Projeto DEVin-Adotion
 * Este é o projeto de uma aplicação para controle de estoque de material para ongs cuidadoras de animais.
 
-## Padrões
-
-### Bibliotecas
+### Padrões
 
 **Para Desenvolvimento:**
 <img width="50" height="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-          
 
 **Para Acesso de Dados:**
 * Fetch
