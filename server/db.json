@@ -1,0 +1,56 @@
+{
+  "usuarios": [],
+  "login": [],
+  "produtos": [
+    {
+      "id": 1,
+      "tipoProduto": "Antiparasitário",
+      "armazemId": "Armazém Cachorro",
+      "animal": "Cachorro",
+      "quantidade": "30",
+      "categoria": "Adulto"
+    },
+    {
+      "id": 2,
+      "tipoProduto": "Ração",
+      "armazemId": "Armazém Gato",
+      "animal": "Gato",
+      "quantidade": "30",
+      "categoria": "Filhote"
+    }
+  ],
+  "armazens": [
+    {
+      "nome": "Armazém 1",
+      "animal": "gato",
+      "situacao": true,
+      "id": 1
+    },
+    {
+      "nome": "Armazém 2",
+      "animal": "cachorro",
+      "situacao": true,
+      "id": 2
+    },
+    {
+      "nome": "Armazém 3",
+      "animal": "gato",
+      "situacao": true,
+      "id": 3
+    },
+    {
+      "nome": "Armazém 4",
+      "animal": "gato",
+      "situacao": true,
+      "id": 4
+    },
+    {
+      "situacao": false,
+      "id": 5
+    },
+    {
+      "situacao": false,
+      "id": 6
+    }
+  ]
+}

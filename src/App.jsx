@@ -2,10 +2,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Login from "./pages/Login";
 import Cadastrar from "./pages/Cadastrar";
-import Estoque from "./pages/Estoque";
+import EstoqueLista from "./pages/EstoqueLista";
+import EstoqueCadastro from "./pages/EstoqueCadastro";
+import EstoqueAtualizar from "./pages/EstoqueAtualizar";
 import Armazem from "./pages/Armazem";
+import ArmazemAtualizar from "./pages/ArmazemAtualizar";
 
-import Home from "./pages/Home/Home";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
@@ -15,8 +18,11 @@ const App = () => {
           <Route path="/" element={<Home />}>
             <Route path="login" element={<Login />}></Route>
             <Route path="cadastrar" element={<Cadastrar />}></Route>
-            <Route path="estoque" element={<Estoque />}></Route>
+            <Route path="estoque" element={<EstoqueLista />}></Route>
+            <Route path="estoqueCadastro" element={<EstoqueCadastro />}></Route>
+            <Route path="estoqueAtualizar/:id" element={<EstoqueAtualizar />}></Route>
             <Route path="armazem" element={<Armazem />}></Route>
+            <Route path="armazemAtualizar/:id" element={<ArmazemAtualizar />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>

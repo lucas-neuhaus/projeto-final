@@ -8,11 +8,11 @@ const Botao = (props) => {
       type={props.tipo}
       style={{
         backgroundColor: props.cor,
-      }}
-    >
-      {props.enviar}
-    </button>
-  );
-};
+        width: props.width,
+        marginLeft: props.marginLeft,
+        marginRight: props.marginRight,
+        marginTop: props.marginTop
+
+
 
 export default Botao;

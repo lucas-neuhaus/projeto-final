@@ -1,0 +1,55 @@
+.armazemTitulo {
+  background-color: #f7f7f7;
+  height: 100px;
+  margin-bottom: 32px;
+  text-align: left;
+  }
+
+.armazemPrincipal {
+  background-color: #f7f7f7;
+}
+
+.armazemLista{
+  margin-bottom: 32px;
+  margin-left: 250px;
+  text-align: left;
+}
+.armazemTabela {
+  background-color: white;
+  margin-left: 250px;
+  justify-content: center;
+  width: 80%;
+  border-collapse: collapse;
+  
+}
+thead{
+  background-color: #f7f7f7;
+}
+
+
+tr {
+  height: 70px;
+  border-bottom: 1px solid #f7f7f7;
+}
+    
+.armazemContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 64px;
+    padding: 16px;
+   
+    }
+
+     
+.armazemBotaoEditar {
+      display: inline-block;
+      margin-right: -120px;
+      background-color: #00DFA2;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      padding: 8px 12px;
+    }

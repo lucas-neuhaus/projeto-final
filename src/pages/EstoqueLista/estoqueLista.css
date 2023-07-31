@@ -1,0 +1,64 @@
+.listaProdutosConteudo {
+  color: #080808;
+  padding: 10px;
+  margin-top: 100px;
+  width: 100px;
+}
+
+.tituloEstoque {
+  margin-top: -20px;
+  margin-left: 20px;
+  font-size: 35px;
+}
+
+.listaProdutosSubtitulo {
+margin-top: 50px;
+margin-right: 140vh;
+}
+
+.listaProdutosTabela {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.listaProdutosTabelaHeadCell {
+  color: #080808;
+  padding: 10px;
+  text-align: center;
+}
+
+.listaProdutosTabelaCell {
+  border: 1px solid #ffffff;
+  padding: 10px;
+}
+
+.listaProdutosCadastrarProdutos {
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.listaProdutosBotaoEditar {
+  display: inline-block;
+  margin-right: 10px;
+  background-color: #00DFA2;
+  color: #fff;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.listaProdutosBotaoExcluir {
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.listaProdutosTabelaCell .listaProdutosBotaoEditar,
+.listaProdutosTabelaCell .listaProdutosBotaoExcluir {
+  text-align: center;
+}
+
+
+  
