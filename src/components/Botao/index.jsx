@@ -12,11 +12,7 @@ const Botao = (props) => {
         marginLeft: props.marginLeft,
         marginRight: props.marginRight,
         marginTop: props.marginTop
-      }}
-    >
-      {props.enviar}
-    </button>
-  );
-};
+
+
 
 export default Botao;
